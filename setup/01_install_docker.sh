@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -ex
+
 # Install Docker
 # Random, unaudited, but "official" script from the internet.
 # What could possibly go wrong? ¯\_(ツ)_/¯
