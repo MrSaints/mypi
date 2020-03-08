@@ -11,6 +11,8 @@ UUID=<UUID of device> /mnt/<mounted directory> ext4 defaults,auto,users,rw,nofai
 
 3. Run `sudo mount /mnt/<mounted directory>` (it will automatically figure out which device to use)
 
+4. Speed test: `sudo hdparm -Tt /dev/sda1`
+
 **Global Configuration (ideal for MacOS):**
 
 Modify `/etc/samba/smb.conf`:
