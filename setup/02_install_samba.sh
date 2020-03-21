@@ -4,4 +4,4 @@ set -ex
 
 # Install Samba
 
-sudo apt-get install samba samba-common-bin
+sudo apt-get install -y samba samba-common-bin

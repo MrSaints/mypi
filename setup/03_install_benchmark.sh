@@ -4,4 +4,4 @@ set -ex
 
 # Install Utils for Benchmarking / Performance Monitoring
 
-sudo apt-get install hdparm iperf
+sudo apt-get install -y hdparm iperf speedtest-cli
