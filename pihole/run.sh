@@ -2,7 +2,7 @@
 
 # Modified from https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
 
-VERSION=4.3.2-1
+VERSION=v4.4
 LOCAL_IP=$(hostname -I | cut -d' ' -f1)
 
 docker run -d \
