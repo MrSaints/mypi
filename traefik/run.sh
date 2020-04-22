@@ -2,9 +2,7 @@
 
 set -e
 
-export VERSION=v4.4
-export LOCAL_IP=$(hostname -I | cut -d' ' -f1)
-export VIRTUAL_HOST=pihole.home.local
+export VERSION=v2.2
 
 docker network create traefik || true
 
