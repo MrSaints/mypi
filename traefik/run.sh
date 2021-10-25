@@ -2,7 +2,7 @@
 
 set -e
 
-export VERSION=v2.2
+export VERSION=v2.5.3
 
 docker network create traefik || true
 
