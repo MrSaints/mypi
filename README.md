@@ -88,6 +88,13 @@ sudo raspi-config
 - To test the internet connection:
     - Run `speedtest-cli`
 
+### Rsync
+
+```
+# -n for dry-run
+rsync -avP -n --exclude=.DS_Store --exclude=Thumbs.db /from/ /to
+```
+
 ### Misc.
 
 - Fix SSH permissions: `sudo chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh/`

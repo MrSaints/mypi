@@ -20,5 +20,5 @@ export RESTIC_REPOSITORY="b2:<bucket name>"
 And to backup:
 
 ```
-restic backup <directory>
+restic backup <directory> --exclude-file=excludes.txt
 ```
