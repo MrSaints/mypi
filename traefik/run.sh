@@ -2,8 +2,8 @@
 
 set -e
 
-export VERSION=v2.5.3
+export VERSION=v2.8.1
 
 docker network create traefik || true
 
-docker-compose up -d --remove-orphans --force-recreate
+docker compose up -d --remove-orphans --force-recreate

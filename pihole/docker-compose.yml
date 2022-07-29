@@ -14,7 +14,9 @@ services:
         ports:
             - "53:53/tcp"
             - "53:53/udp"
-            - "67:67/udp"
+            # Not needed unless using for DHCP.
+            # - "67:67/udp"
+            # Not needed because we are using Traefik.
             # - "80:80/tcp"
             # - "443:443/tcp"
         volumes:
@@ -32,8 +34,9 @@ services:
             - "traefik.http.routers.pihole.rule=HostRegexp(`${VIRTUAL_HOST}`, `{catchall:.*}`)"
             - "traefik.http.routers.pihole.priority=1"
             - "traefik.http.services.pihole.loadbalancer.server.port=80"
-        cap_add:
-            - "NET_ADMIN"
+        # Not needed unless using for DHCP.
+        # cap_add:
+        #    - "NET_ADMIN"
         restart: "unless-stopped"
 
 networks:

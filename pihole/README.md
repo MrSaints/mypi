@@ -4,7 +4,7 @@
 ./run.sh
 ```
 
-If upgrading, ensure to run `docker pull pihole/pihole:$VERSION` / `docker-compose pull` first to save time starting the new version.
+If upgrading, ensure to run `docker pull pihole/pihole:$VERSION` / `docker compose pull` first to save time starting the new version.
 
 The admin panel is configured to be accessed via Traefik at `pihole.home.local`.
 
