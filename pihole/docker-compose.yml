@@ -31,6 +31,7 @@ services:
             - "traefik"
         labels:
             - "traefik.enable=true"
+            - "traefik.http.routers.pihole.tls=true"
             - "traefik.http.routers.pihole.rule=HostRegexp(`${VIRTUAL_HOST}`, `{catchall:.*}`)"
             - "traefik.http.routers.pihole.priority=1"
             - "traefik.http.services.pihole.loadbalancer.server.port=80"
