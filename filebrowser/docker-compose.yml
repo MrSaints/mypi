@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+    filebrowser:
+        image: filebrowser/filebrowser:${VERSION}
+        user: "${UID}:${GID}"
+        command:
+            - "--cache-dir=/data/cache"
+            - "-d=/data/database.db"
+            - "-p=8088"
+        healthcheck:
+            # Override default as it is pointed to 80
+            test:
+                - "CMD-SHELL"
+                - "curl -f http://localhost:8088/health || exit 1"
+        volumes:
+            # - "/media/desiredDirectory:/srv/desiredDirectory:ro"
+            - "./data:/data"
+        networks:
+            - "traefik"
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.files.tls=true"
+            - "traefik.http.routers.files.rule=Host(`files.home.local`)"
+            - "traefik.http.services.files.loadbalancer.server.port=8088"
+        restart: "unless-stopped"
+
+networks:
+    traefik:
+        external: true
